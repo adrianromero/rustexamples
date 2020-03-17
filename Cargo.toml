@@ -1,0 +1,10 @@
+[package]
+name = "rustexamples"
+version = "0.1.0"
+authors = ["Adrián Romero <adrianromero@users.noreply.github.com>"]
+edition = "2018"
+
+[dependencies]
+serde = { version ="1.0.104", features = ["derive"] }
+serde_json = "1.0.44"
+postgres = "0.17.0"
