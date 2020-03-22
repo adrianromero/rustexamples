@@ -43,6 +43,7 @@ pub fn main() {
     myclosure();
 
     println!("j is finally equal to {}", j);
+    assert_eq!(j, 500);
 }
 
 fn do_things_with_jose(value: &Jose) -> i32 {
