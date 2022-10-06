@@ -1,3 +1,6 @@
+//    Rust Examples is a collection of small portions of code written in Rust
+//    Copyright (C) 2022 Adrián Romero Corchado.
+
 use rand::Rng;
 use std::cmp::Ordering;
 
@@ -13,10 +16,7 @@ pub fn main() {
 fn parsing() {
     let mynumber = String::from("2342.33");
 
-    let mynumber: f64 = match mynumber.trim().parse() {
-        Ok(num) => num,
-        Err(_) => panic!(),
-    };
+    let mynumber: f64 = mynumber.trim().parse().unwrap();
 
     println!("el número es {}", mynumber);
 

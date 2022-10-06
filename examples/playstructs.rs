@@ -1,3 +1,6 @@
+//    Rust Examples is a collection of small portions of code written in Rust
+//    Copyright (C) 2022 Adrián Romero Corchado.
+
 #[derive(Debug)]
 struct Pepe {
     pub a: i32,

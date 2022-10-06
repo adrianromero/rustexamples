@@ -1,3 +1,6 @@
+//    Rust Examples is a collection of small portions of code written in Rust
+//    Copyright (C) 2022 Adrián Romero Corchado.
+
 use boa::prelude::{JsResult, JsString, JsValue};
 use boa::Context;
 
@@ -10,7 +13,10 @@ fn main() {
 
     const c =[3,3,3,2];
 
-    print('This is a message. ', suma(4, 5), false, null);
+    print('This is a message. ');
+    print('Suma javascript ', suma(4, 5));
+    print(null);
+    print(false);
     print(c);
 
     Math.PI ;

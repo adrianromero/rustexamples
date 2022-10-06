@@ -1,5 +1,5 @@
 //    Rust Examples is a collection of small portions of code written in Rust
-//    Copyright (C) 2020 Adrián Romero Corchado.
+//    Copyright (C) 2022 Adrián Romero Corchado.
 //
 //    This file is part of Rust Examples
 //
@@ -16,23 +16,22 @@
 //     limitations under the License.
 
 fn main() {
-
-    let mut s : String = String::from("Initial String");
+    let mut s: String = String::from("Initial String");
     s.push_str("\nPushed by owner");
     append_string(&mut s);
-    println!("s (owner) -> {}", s) ;
-   
-    let sref : &mut String = &mut s;
+    println!("s (owner) -> {}", s);
+
+    let sref: &mut String = &mut s;
     sref.push_str("\nPushed by mutable reference");
     println!("sref (&mut) -> {}", sref);
 
     append_string(sref);
     append_string(sref);
-    
+
     s.push_str("\nPushed by owner");
 
-    let sref : &mut String = &mut s; // borrow again because of previous one is borrowed again
-    
+    let sref: &mut String = &mut s; // borrow again because of previous one is borrowed again
+
     // s.push_str("\nTrying to push by owner");
     // ^ second mutable borrow occurs here
 
@@ -44,7 +43,7 @@ fn main() {
     // println!("sref (&mut) -> {}", sref);
     // ---- first borrow later used here
 
-    println!("s (owner) -> {}", s) ;
+    println!("s (owner) -> {}", s);
 }
 
 pub fn append_string(pepe: &mut String) {

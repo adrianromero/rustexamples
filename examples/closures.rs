@@ -1,3 +1,6 @@
+//    Rust Examples is a collection of small portions of code written in Rust
+//    Copyright (C) 2022 Adrián Romero Corchado.
+
 fn main() {
     let f = my_function(AppInfo { two: 4 });
     println!("f(4)={}", f(4));
