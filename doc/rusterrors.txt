@@ -1,0 +1,80 @@
+ClassResult myMethod(ClassParameter value) {
+
+ClassResult r = myMethod(value);
+
+
+fn my_function(value: TypeParameter) -> TypeResult {
+
+let r = my_function(value);
+
+
+
+ClassResult myMethod(value: TypeParameter) throws ClassException {
+try {
+    ClassResult r = myMethod(value);
+    // Success...
+catch ( ClassException ex) {
+    // Error...	
+}
+
+fn my_function(value: TypeParameter) -> Result<TypeResult, TypeError> {
+match my_function(value) => {
+    Ok(r): {
+        // Success...
+    },
+    Err(err): {
+        // Error...
+    }
+}
+
+void otherMethod() throws ClassException {
+    ClassResult r = myMethod(value);
+    ClassResult s = myMethod2(value);
+    ClassResult t = myMethod3(value);
+    //
+}
+
+fn other_function() -> Result<(), TypeError> {
+
+    let r = match my_function(value) => {
+        Ok(result): Result,
+        Err(err): {
+            return err;
+	    }
+    }
+    let s = match my_function2(value) => {
+        Ok(result): Result,
+        Err(err): {
+            return err;
+	    }
+    }
+    let t = match my_function3(value) => {
+        Ok(result): Result,
+        Err(err): {
+            return err;
+	    }
+    }
+}
+ // We can chain
+fn other_function() -> Result<(), TypeError> {
+    let r = my_function(value)?;
+    let s = my_function2(value)?;
+    let t = my_function3(value)?;
+}
+
+
+//We already verifyed exception conditions, or prototyping,
+ 
+void otherMethod() {
+    try { 
+        ClassResult result = myMethod(value);
+    catch (ClassException ex) {
+        throws new RuntimeException(ex);
+    }
+}
+
+fn other_function() {
+  let result = my_function(value).unwrap();
+}
+
+

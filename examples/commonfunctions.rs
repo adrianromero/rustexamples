@@ -2,7 +2,7 @@ use rand::Rng;
 use std::cmp::Ordering;
 
 pub fn main() {
-    let secret_number = rand::thread_rng().gen_range(1, 101);
+    let secret_number = rand::thread_rng().gen_range(1..101);
 
     println!("Secret number {}.", secret_number);
 
@@ -29,7 +29,7 @@ fn parsing() {
 
 fn ordering() {
     let one = 35;
-    let two = 40;
+    let two = 100;
     match one.cmp(&two) {
         Ordering::Less => println!("Too small!"),
         Ordering::Greater => panic!(),

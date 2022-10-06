@@ -1,4 +1,4 @@
-
 fn main() {
-    println!("Examples in Rust!");
+    println!("This is an examples project");
+    println!("run: cargo run --example borrowing");
 }

@@ -5,7 +5,11 @@ authors = ["Adrián Romero <adrianromero@users.noreply.github.com>"]
 edition = "2018"
 
 [dependencies]
-rand = "0.7.3"
-serde = { version ="1.0.105", features = ["derive"] }
-serde_json = "1.0.48"
-postgres = "0.17.2"
+log = "0.4.14"
+env_logger = "0.9.0"
+
+rand = "0.8.1"
+serde = { version ="1.0.130", features = ["derive"] }
+serde_json = "1.0.61"
+postgres = "0.19.0"
+Boa = "0.13.0"

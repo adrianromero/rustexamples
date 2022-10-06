@@ -38,7 +38,6 @@ fn main() {
     // Prints deserialized = Point { x: 1, y: 2 }
     println!("deserialized = {:?}", deserialized);
 
-
     let another = r#"
         {
             "y":1,
@@ -50,5 +49,4 @@ fn main() {
 
     println!("*{}*", another);
     println!("another {:?} ", j.unwrap());
-
 }
